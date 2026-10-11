@@ -8,6 +8,12 @@ Als WLAN-Hardware kommt in diesem Aufbau ein **TP-Link EAP225 Outdoor, Hardware-
 
 Weitere Informationen zur Hardware und den verschiedenen Firmware-Möglichkeiten finden sich beispielsweise in der [OpenWrt-Hardware-Datenbank](https://openwrt.org/toh/tp-link/eap225).
 
+<p align="center">
+  <img src="ressources/eap225.jpg" width="500" alt="eap225">
+  <br>
+  <sub><em>TP-Link EAP225 Outdoor, provisorisch mit Kabelbindern im Fenster befestigt – unauffällig montiert, damit der Vermieter nichts zu meckern hat.</em></sub>
+</p>
+
 Die Unterstützung eines Geräts durch Gluon hängt unter anderem von der jeweiligen Hardware-Revision und der vorgesehenen Installationsmethode ab. Der EAP225 Outdoor wird in der Gluon-Geräteliste für bestimmte Hardware-Revisionen als unterstützt geführt. Daraus lässt sich jedoch nicht automatisch ableiten, dass jede Firmware- oder Installationsvariante für das konkret vorhandene Gerät geeignet ist.
 
 Da der Access Point bereits mit der originalen Omada-Firmware zuverlässig funktioniert und ein Flash-Vorgang immer ein gewisses Risiko mit sich bringt, bleibt er in diesem Aufbau unverändert. So bleibt auch die Möglichkeit erhalten, ihn künftig unabhängig vom Freifunk-Projekt oder in einer anderen Netzwerkinfrastruktur weiterzuverwenden. Die eigentliche Freifunk-Funktionalität wird stattdessen von einem separaten x86-64-Rechner übernommen.
