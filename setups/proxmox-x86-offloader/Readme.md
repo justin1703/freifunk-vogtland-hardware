@@ -150,3 +150,8 @@ Anschließend einen externen IP-Endpunkt testen:
 Wenn der externe Ping funktioniert, ist die grundlegende WAN-Verbindung vorhanden.
 
 Der erfolgreiche Ping allein bestätigt jedoch noch nicht, dass der Freifunk-VPN-Tunnel oder der Client-Datenpfad korrekt funktioniert.
+
+## 9. Weiterführende Links
+
+- [Freifunk Lippe: Freifunk-Offloader mit Proxmox](https://freifunk-lippe.de/neuigkeiten/freifunk-offloader-mit-proxmox/)
+- [Freifunk Bremen: Offloader mit Fujitsu Futro](https://wiki.bremen.freifunk.net/Anleitungen/Offloader/Offloader-Futro)
