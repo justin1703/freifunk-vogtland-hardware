@@ -4,7 +4,7 @@
 
 Diese Anleitung beschreibt die Installation eines Freifunk-Vogtland-Gluon-Offloaders als virtuelle Maschine unter Proxmox VE.
 
-Die VM verwendet zwei virtuelle Netzwerkkarten:
+Die VM verwendet in meinem Fall zwei virtuelle Netzwerkkarten:
 
 - `eth0`: Client-/Mesh-Seite, VLAN 30
 - `eth1`: WAN-Seite, untagged/native VLAN 1

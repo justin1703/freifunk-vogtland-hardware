@@ -2,23 +2,25 @@
 
 ## 1. Ziel und Ausgangssituation
 
-Ziel dieses Aufbaus ist es, einen leistungsfähigen Freifunk-Vogtland-Knoten bereitzustellen, bei dem die Freifunk-Funktionalität auf einem separaten x86-64-Offloader ausgeführt wird und nicht auf dem WLAN-Access-Point selbst.
+Ziel dieses Aufbaus ist es, einen leistungsfähigen Freifunk-Vogtland-Knoten bereitzustellen, bei dem die Freifunk-Funktionalität auf einem separaten x86-64-Offloader ausgeführt wird, während der WLAN-Access-Point mit seiner originalen Hersteller-Firmware betrieben wird.
 
-Als WLAN-Hardware kommt in diesem Aufbau ein **TP-Link EAP225 Outdoor, Hardware-Revision V3.20**, mit der originalen TP-Link-Omada-Firmware `5.2.4 Build 20251024 Rel. 63790(4555)` zum Einsatz. Der Access Point wird bewusst nicht mit Freifunk- oder anderer alternativer Firmware geflasht, sondern weiterhin mit der originalen Firmware betrieben.
+Der Ausgangspunkt ist ein TP-Link EAP225 Outdoor mit Hardware-Revision V3.20, auf dem die originale TP-Link-Omada-Firmware 5.2.4 Build 20251024 Rel. 63790(4555) installiert ist. In dieser konkreten Hardware- und Firmware-Konstellation lässt sich Gluon nicht wie benötigt direkt auf dem Access Point installieren. Daher wird die Freifunk-Funktionalität auf einen separaten Rechner ausgelagert.
 
-Weitere Informationen zur Hardware und den verschiedenen Firmware-Möglichkeiten finden sich beispielsweise in der [OpenWrt-Hardware-Datenbank](https://openwrt.org/toh/tp-link/eap225).
+Der Access Point wird bewusst weder mit Gluon noch mit einer anderen alternativen Firmware geflasht. Stattdessen bleibt die originale Omada-Firmware erhalten und der EAP225 wird ausschließlich als WLAN-Access-Point eingesetzt. Die eigentliche Freifunk-Funktionalität übernimmt ein eigenständiger x86-64-Rechner, auf dem Gluon für das Freifunk-Vogtland-Netz installiert wird.
 
-Die Unterstützung eines Geräts durch Gluon hängt unter anderem von der jeweiligen Hardware-Revision und der vorgesehenen Installationsmethode ab. Der EAP225 Outdoor wird in der Gluon-Geräteliste für bestimmte Hardware-Revisionen als unterstützt geführt. Daraus lässt sich jedoch nicht automatisch ableiten, dass jede Firmware- oder Installationsvariante für das konkret vorhandene Gerät geeignet ist.
+Weitere Informationen zur Hardware und zu den verfügbaren Firmware-Optionen finden sich beispielsweise in der OpenWrt-Hardware-Datenbank zum TP-Link EAP225.
+
+Die Unterstützung eines Geräts durch Gluon hängt unter anderem von der Hardware-Revision und der vorgesehenen Installationsmethode ab. Angaben zur Unterstützung anderer Revisionen oder Installationsvarianten lassen sich deshalb nicht ohne Weiteres auf das hier vorhandene Gerät übertragen.
 
 <p align="center">
-  <img src="../../resources/eap225.jpg" width="700" alt="eap225">
+  <img src="../../../assets/eap225-outdoor-v3.jpg" width="700" alt="TP-Link EAP225 Outdoor V3.20">
   <br>
-  <sub><em>TP-Link EAP225 Outdoor, provisorisch mit Kabelbindern im Fenster befestigt – unauffällig montiert, damit der Vermieter nichts zu meckern hat.</em></sub>
+  <sub><em>TP-Link EAP225 Outdoor V3.20, unauffällig und provisorisch im Fensterbereich befestigt.</em></sub>
 </p>
 
-Da der Access Point bereits mit der originalen Omada-Firmware zuverlässig funktioniert und ein Flash-Vorgang immer ein gewisses Risiko mit sich bringt, bleibt er in diesem Aufbau unverändert. So bleibt auch die Möglichkeit erhalten, ihn künftig unabhängig vom Freifunk-Projekt oder in einer anderen Netzwerkinfrastruktur weiterzuverwenden. Die eigentliche Freifunk-Funktionalität wird stattdessen von einem separaten x86-64-Rechner übernommen.
+Da der Access Point bereits mit der originalen Omada-Firmware zuverlässig funktioniert, bleibt er in diesem Aufbau unverändert. Dadurch entfällt das Risiko eines Firmware-Flashs und die Möglichkeit bleibt erhalten, den EAP225 künftig unabhängig vom Freifunk-Projekt oder in einer anderen Netzwerkinfrastruktur weiterzuverwenden.
 
-Hierfür kommt bei mir ein älterer Rechner zum Einsatz, den ich noch auf dem Dachboden hatte:
+Als Offloader kommt ein älterer Rechner zum Einsatz, der noch vorhanden war und für diesen Zweck weiterverwendet wird:
 
 - **Hardware:** Lenovo ThinkCentre M700
 - **CPU:** Intel Core i5-6500
@@ -27,7 +29,9 @@ Hierfür kommt bei mir ein älterer Rechner zum Einsatz, den ich noch auf dem Da
 - **Netzwerk:** integrierte Ethernet-Schnittstelle und zusätzliche Ethernet-Schnittstelle
 - **Software:** Freifunk Vogtland Gluon für x86-64
 
-Damit übernimmt der ThinkCentre die eigentliche Freifunk-Funktionalität, während der EAP225 ausschließlich als WLAN-Access-Point dient.
+Der ThinkCentre übernimmt die Freifunk-Funktionalität, während der EAP225 ausschließlich die WLAN-Versorgung bereitstellt. Damit werden die Aufgaben klar getrennt: Der Offloader stellt die Freifunk-Netzwerkfunktionen bereit, der Access Point dient als Schnittstelle für die WLAN-Clients.
+
+Die folgenden Abschnitte beschreiben die Installation und Konfiguration des physischen Offloaders sowie die anschließende Integration des TP-Link EAP225 Outdoor in den Freifunk-Knoten.
 
 ## 2. Inbetriebnahme des Offloaders
 
