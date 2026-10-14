@@ -141,6 +141,12 @@ Beispiel:
 
 Die konkrete IP-Adresse und das Gateway können je nach Netzwerk abweichen.
 
+<p align="center">
+  <img src="../../../assets/offloader-ssh.png" width="700" alt="SSH-Zugriff auf den Offloader">
+  <br>
+  <sub><em>SSH-Zugriff auf den Offloader.</em></sub>
+</p>
+
 ## 8. WAN-Verbindung testen
 
 Anschließend einen externen IP-Endpunkt testen:

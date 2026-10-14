@@ -135,6 +135,12 @@ Die genaue Erreichbarkeit hängt von der aktiven Konfiguration und der verwendet
 
 Alternativ können Knoteneinstellungen per SSH und UCI vorgenommen werden. In dieser Anleitung wird dafür der vollständige Pfad `/sbin/uci` verwendet.
 
+<p align="center">
+  <img src="../../../assets/offloader-ssh.png" width="700" alt="SSH-Zugriff auf den Offloader">
+  <br>
+  <sub><em>SSH-Zugriff auf den Offloader.</em></sub>
+</p>
+
 ### Schritt 2: Knoteneinstellungen festlegen
 
 Die folgenden Befehle zeigen beispielhaft, wie Hostname, Standort und Kontaktadresse konfiguriert werden.
