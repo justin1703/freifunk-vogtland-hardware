@@ -117,6 +117,12 @@ Falls eine alte Disk vorhanden ist, diese erst entfernen, nachdem die neue Disk 
 
 Die VM-Konsole in der Proxmox-Weboberfläche öffnen und warten, bis Gluon vollständig gestartet ist.
 
+<p align="center">
+  <img src="../../../assets/freifunk-proxmox.png" width="700" alt="Offloader in Proxmox VE 9.2.21">
+  <br>
+  <sub><em>Offloader in Proxmox VE 9.2.21</em></sub>
+</p>
+
 ## 7. Netzwerkzuordnung in Gluon prüfen
 
 Per SSH oder VM-Konsole anmelden und ausführen:
