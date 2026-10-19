@@ -13,9 +13,9 @@ Weitere Informationen zur Hardware und zu den verfügbaren Firmware-Optionen fin
 Die Unterstützung eines Geräts durch Gluon hängt unter anderem von der Hardware-Revision und der vorgesehenen Installationsmethode ab. Angaben zur Unterstützung anderer Revisionen oder Installationsvarianten lassen sich deshalb nicht ohne Weiteres auf das hier vorhandene Gerät übertragen.
 
 <p align="center">
-  <img src="../../../assets/eap225-outdoor-v3.jpg" width="700" alt="TP-Link EAP225 Outdoor V3.20">
+  <img src="../../../assets/eap225-outdoor-v3.jpeg" width="700" alt="TP-Link EAP225 Outdoor V3.20">
   <br>
-  <sub><em>TP-Link EAP225 Outdoor V3.20, unauffällig und provisorisch im Fensterbereich befestigt.</em></sub>
+  <sub><em>TP-Link EAP225 Outdoor V3.20, mit einer Fensterhalterung für SAT-Geräte im Fensterbereich befestigt.</em></sub>
 </p>
 
 Da der Access Point bereits mit der originalen Omada-Firmware zuverlässig funktioniert, bleibt er in diesem Aufbau unverändert. Dadurch entfällt das Risiko eines Firmware-Flashs und die Möglichkeit bleibt erhalten, den EAP225 künftig unabhängig vom Freifunk-Projekt oder in einer anderen Netzwerkinfrastruktur weiterzuverwenden.
@@ -215,8 +215,6 @@ Der externe Access Point wird mit der gewünschten Freifunk-SSID `vogtland.freif
 Anschließend wird er direkt mit der dafür vorgesehenen Client-Schnittstelle (`br-client`) des Offloaders verbunden. Der Access Point übernimmt dabei die Bereitstellung des WLANs; die Freifunk-Funktionalität wird vom Offloader bereitgestellt.
 
 Die konkrete Konfiguration des Access Points richtet sich nach dessen Modell und Firmware. Bei einer direkten Verbindung zum Offloader ist darauf zu achten, dass der Access Point nicht zusätzlich mit dem privaten Heimnetz verbunden wird.
-
-Vor dem produktiven Betrieb sollte geprüft werden, ob WLAN-Clients tatsächlich über den Offloader verbunden werden und keinen Zugriff auf das private Heimnetz erhalten.
 
 ## 4. Weiterführende Dokumentation
 
