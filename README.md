@@ -5,7 +5,13 @@ Dokumentation der Hardware und technischen Aufbauten im Freifunk-Vogtland-Netz.
 ## Installationen mit Offloadern
 
 - [TP-Link EAP225 Outdoor mit physischem x86-64-Offloader](guides/offloader/physical/README.md)
-- [TP-Link EAP225 Outdoor mit virtuellem x86-64-Offloader unter Proxmox VE](guides/offloader/proxmox/README.md)
+- [x86-64-Offloader unter Proxmox VE](guides/offloader/proxmox/README.md)
+
+<p align="center">
+  <img src="assets/eap225-outdoor-v3.jpeg" width="700" alt="TP-Link EAP225 Outdoor V3.20">
+  <br>
+  <sub><em>TP-Link EAP225 Outdoor V3.20, mit einer Fensterhalterung für SAT-Geräte im Fensterbereich befestigt.</em></sub>
+</p>
 
 ## Geplante Funkstrecken
 
