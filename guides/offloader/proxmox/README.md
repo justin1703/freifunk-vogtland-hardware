@@ -163,6 +163,12 @@ Wenn der externe Ping funktioniert, ist die grundlegende WAN-Verbindung vorhande
 
 Der erfolgreiche Ping allein bestätigt jedoch noch nicht, dass der Freifunk-VPN-Tunnel oder der Client-Datenpfad korrekt funktioniert.
 
+<p align="center">
+  <img src="../../../assets/speedtest-lan.png" width="700" alt="Speedtest über LAN">
+  <br>
+  <sub><em>Speedtest über LAN bei einer CPU-Auslastung von ca. 22 % auf dem Offloader. Theoretisch verfügbare Internetbandbreite: ca. 500 Mbit/s Download und 50 Mbit/s Upload.</em></sub>
+</p>
+
 ## 9. Weiterführende Links
 
 - [Freifunk Lippe: Freifunk-Offloader mit Proxmox](https://freifunk-lippe.de/neuigkeiten/freifunk-offloader-mit-proxmox/)
