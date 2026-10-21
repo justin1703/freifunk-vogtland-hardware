@@ -208,6 +208,55 @@ Der erste Befehl speichert die Systemkonfiguration, beispielsweise den Hostnamen
 
 Die Änderungen können anschließend überprüft werden. Die `uci set`-Befehle allein speichern die Änderungen noch nicht dauerhaft.
 
+
+#### Domain ändern
+
+Die aktive Gluon-Domain steht in `/etc/config/gluon`:
+
+    config core 'core'
+        option domain 'ffv_pl'
+
+Es gibt zwei Möglichkeiten, die Domain zu ändern: mit `vi` direkt in der Konfigurationsdatei oder mit `uci` über die Kommandozeile.
+
+**Variante 1: Domain mit vi ändern**
+
+Datei öffnen:
+
+```bash
+vi /etc/config/gluon
+```
+
+Anleitung:
+1. Mit den Pfeiltasten zu `option domain'` navigieren.
+2. `i` drücken, um in den Einfügemodus zu wechseln.
+3. gewünschten Domain-Identifier eintragen.
+4. `Esc` drücken, um den Einfügemodus zu verlassen.
+5. `:zz` eingeben und mit `Enter` speichern.
+
+Anschließend die Gluon-Konfiguration neu anwenden und den Offloader neu starten:
+
+```bash
+gluon-reconfigure
+reboot
+```
+
+**Variante 2: Domain mit UCI ändern**
+
+`NEUE_DOMAIN` durch den gewünschten Domain-Identifier ersetzen:
+
+```bash
+uci set gluon.core.domain='NEUE_DOMAIN'
+uci commit gluon
+gluon-reconfigure
+reboot
+```
+
+Erklärung:
+- `uci set` ändert den Domain-Wert.
+- `uci commit gluon` speichert die Änderung dauerhaft.
+- `gluon-reconfigure` wendet die Gluon-Konfiguration an.
+- `reboot` startet den Offloader neu.
+
 ### Schritt 3: Access Point konfigurieren und anschließen
 
 Der externe Access Point wird mit der gewünschten Freifunk-SSID `vogtland.freifunk.net` und ohne WLAN-Authentifizierung konfiguriert.

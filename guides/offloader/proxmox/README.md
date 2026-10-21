@@ -169,7 +169,12 @@ Der erfolgreiche Ping allein bestätigt jedoch noch nicht, dass der Freifunk-VPN
   <sub><em>Speedtest über LAN bei einer CPU-Auslastung von ca. 22 % auf dem Offloader. Theoretisch verfügbare Internetbandbreite: ca. 500 Mbit/s Download und 50 Mbit/s Upload.</em></sub>
 </p>
 
-## 9. Weiterführende Links
+## 9. Konfiguration des Offloader
+
+Weitere Informationen findest du unter
+[3. Zugriff und Konfiguration des Knotens](../physical/README.md#3-zugriff-und-konfiguration-des-knotens).
+
+## 10. Weiterführende Links
 
 - [Freifunk Lippe: Freifunk-Offloader mit Proxmox](https://freifunk-lippe.de/neuigkeiten/freifunk-offloader-mit-proxmox/)
 - [Freifunk Bremen: Offloader mit Fujitsu Futro](https://wiki.bremen.freifunk.net/Anleitungen/Offloader/Offloader-Futro)
